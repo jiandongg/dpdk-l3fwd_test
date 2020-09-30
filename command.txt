@@ -55,6 +55,16 @@
 
 ./build/l3fwd -l 2,4,6,8 -w 0000:3b:00.0 -w 0000:3b:00.1 -w 0000:5e:00.2 -w 0000:5e:00.3 -- -P -L -p 0xf --config="(0,0,2),(1,0,4),(2,0,6),(3,0,8)"
 
+80G
+4core_8port
+./l2fwd -c 0x55 -- -p 0xff -no-mac-updating -q 8
+
+8core_8port
+./l2fwd -c 0x5555 -- -p 0xff -no-mac-updating -q 8
+
+16core_8port
+./l2fwd -c 0x55555555 -- -p 0xff -no-mac-updating -q 8
+
 
 
 
