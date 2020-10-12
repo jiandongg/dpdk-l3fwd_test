@@ -57,13 +57,13 @@
 
 80G
 1core_8port
-./l2fwd -c 0x5 -n 2 -- -q 8 -p 0xff --no-mac-updating
+./l2fwd -c 0x5 -n 1 -- -q 8 -p 0xff --no-mac-updating
 
 2core_8port
 ./l2fwd -c 0x5 -n 2 -- -q 4 -p 0xff --no-mac-updating
 
 4core_8port
-./l2fwd -c 0x55 -n 2 -- -q 2 -p 0xff --no-mac-updating
+./l2fwd -c 0x55 -n 4 -- -q 2 -p 0xff --no-mac-updating
 
 8core_8port
 ./l2fwd -c 0x5555 -n 8 -- -p 0xff --no-mac-updating
